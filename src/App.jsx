@@ -1,33 +1,28 @@
-// un composant react
-import React from "react";
-
+import Footer from './composants/containers/Footer/Footer';
 import Header from './composants/containers/Header/Header';
-import Footer from "./composants/containers/Footer/Footer";
-import User from "./composants/containers/User/User";
-
+import User from './composants/containers/User/User';
+import Bouton from './composants/ui/Bouton/Bouton';
 function App() {
-const nom = "Mohammed";
-
-
-//Composant React parameter
-function Bouton({label, couleur}){
-
-return <button style ={{ backgroundColor: couleur}}>{label}</button>
-}
   return (
     <>
-    <Header/>
-      <h1>{nom}</h1>
-      <User/>
-      
-      {Bouton({label: "Valider", couleur: "green"})}
-      {Bouton({label: "Supprimer", couleur: "red"})}
-      <Bouton label="Hello" couleur="purple"></Bouton>
+      <div>
+        <Header />
+        <Bouton />
 
-
-      <Footer/>
+        <User />
+        
+        <Footer />
+      </div>
     </>
   )
 }
 
-export default App
+export default App;
+
+// Exercice 2: Enoncé envoyé en PDF sur Discord
+// Créer un branche: exo/user
+// Travailler dessus.
+// Fair un Push
+// Sur Github créer un Pull Request
+// Ajouter Djemai-Samy en reviewer
+// Me notifier
