@@ -1,7 +1,7 @@
 // un composant react
 import React from "react";
-import { Header } from './assets/composants/containers/Header/Header';
-import {Footer } from "./assets/composants/containers/Footer/Footer";
+import { Header } from './composants/containers/Header/Header';
+import { Footer } from "./composants/containers/Footer/Footer";
 function App() {
 const nom = "Mohammed";
 
