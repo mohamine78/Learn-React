@@ -1,12 +1,10 @@
 // un composant react
 import React from "react";
-<<<<<<< HEAD
-import { Header } from './composants/containers/Header/Header';
-import { Footer } from "./composants/containers/Footer/Footer";
-=======
+
 import Header from './composants/containers/Header/Header';
 import Footer from "./composants/containers/Footer/Footer";
->>>>>>> e69f36a (export default fixed)
+import User from "./composants/containers/User/User";
+
 function App() {
 const nom = "Mohammed";
 
@@ -20,6 +18,8 @@ return <button style ={{ backgroundColor: couleur}}>{label}</button>
     <>
     <Header/>
       <h1>{nom}</h1>
+      <User/>
+      
       {Bouton({label: "Valider", couleur: "green"})}
       {Bouton({label: "Supprimer", couleur: "red"})}
       <Bouton label="Hello" couleur="purple"></Bouton>
