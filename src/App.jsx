@@ -1,7 +1,12 @@
 // un composant react
 import React from "react";
+<<<<<<< HEAD
 import { Header } from './composants/containers/Header/Header';
 import { Footer } from "./composants/containers/Footer/Footer";
+=======
+import Header from './composants/containers/Header/Header';
+import Footer from "./composants/containers/Footer/Footer";
+>>>>>>> e69f36a (export default fixed)
 function App() {
 const nom = "Mohammed";
 
