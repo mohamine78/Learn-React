@@ -1,4 +1,5 @@
-export function Footer(){
+export default function Footer(){
+
     return(
             <footer>
     <a href="#">Mentions Légales</a>
