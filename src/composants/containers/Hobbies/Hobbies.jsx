@@ -1,34 +1,34 @@
-export default function Hobbies(){
-    const hobbiesFromDB = [
-    {
-        id:"weifub12r23rpoj",
-        nom:"HTML",
+import PropTypes from "prop-types";
+
+export default function Hobbies({ hobbies }) {
+  if (!hobbies.length) {
+    return <p>Aucun hobby disponible.</p>;
+  }
+
+  const styles = {
+    listItem: {
+      padding: "10px",
+      border: "1px solid white",
+      margin: "0.5em",
     },
-    {   id:"wfweuwefwef09oj",
-        nom:"CSS",
-    },
-    {   id:"wfj7kuytoj",
-        nom:"Javascript",
-    },
-    {   id:"wgwrewf09oj",
-        nom:"React",
-    }
-];
-    
-    return(
-        <ul>
-            {hobbiesFromDB.map((hobby) => {
-                return (
-                <li 
-                key={hobby.id}
-                style={{
-                    padding: "10px",
-                    border:"1px solid white",
-                    margin: "0.5em"
-                }}>
-                {hobby.nom}
-                </li>)
-            })}
-        </ul>
-    )
+  };
+
+  return (
+    <ul>
+      {hobbies.map((hobby) => (
+        <li key={hobby.id} style={styles.listItem}>
+          {hobby.nom}
+        </li>
+      ))}
+    </ul>
+  );
 }
+
+Hobbies.propTypes = {
+  hobbies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      nom: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
