@@ -1,18 +1,17 @@
-export default function Footer(){
+import Bouton from "../../ui/Bouton/Bouton";
 
-    function contact() {
-        alert ('contact')
-    }
+export default function Footer() {
 
-    return(
-            <footer>
-    <a href="#">Mentions Légales</a>
-    <a href="#" >Politique de Confidentialité</a>
-    <a href="#">Contact</a>
-    <Bouton couleur = {'blue'} gereClique={contact}>
-          <p>Foot</p>
-        </Bouton>
-</footer>
+  function contact() {
+    alert('contact')
+  }
 
-    )
+  return (
+    <footer>
+      <p>Copyright 2024</p>
+      <Bouton couleur="blue" gereClique={contact}>
+        <p>Contactez-nous</p>
+      </Bouton>
+    </footer>
+  )
 }

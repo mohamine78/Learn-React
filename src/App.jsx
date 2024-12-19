@@ -1,43 +1,27 @@
+import ContactForm from './composants/containers/ContactForm/ContactForm';
 import Footer from './composants/containers/Footer/Footer';
 import Header from './composants/containers/Header/Header';
 import User from './composants/containers/User/User';
-import Bouton from './composants/ui/Bouton/Bouton';
-import Players from './composants/containers/Players/Players';
+import "./index.css";
 
 function App() {
-
-const user = {
-  prenom: "Mohammed",
-  nom: "HARNOUFI",
-  age: 25,
-  hobbies: ['Travel','Cinema','Sport'],
-};
-function ajouter(){
-  alert('ajouter');
-}
-
-function supprimer(){
-alert('supprimer');
-}
+  const user = {
+    prenom: "John",
+    nom: "Doe",
+    age: 35,
+    hobbies: [
+      { id: 'html', nom: "HTML" },
+      { id: 'react', nom: "React" }]
+  }
 
   return (
     <>
       <div>
         <Header />
-        <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-        <Bouton couleur = {'green'} gereClique={ajouter}>
-          <p>Valider</p>
-        </Bouton>
-        <Bouton couleur = {'red'} gereClique={supprimer}
-                        >
-          <p>Valider</p>
-        </Bouton>
+        
+        <ContactForm />
 
-        <User utilisateur = {user}/>
-        <Players score={65} />
-
+        <User utilisateur={user} />
         <Footer />
       </div>
     </>
@@ -53,3 +37,4 @@ export default App;
 // Sur Github créer un Pull Request
 // Ajouter Djemai-Samy en reviewer
 // Me notifier
+

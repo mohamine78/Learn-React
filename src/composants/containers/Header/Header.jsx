@@ -1,22 +1,17 @@
-import classes from "./Header.module.css"
-
-export default function Header(){
-
-    const userFromDB = {
-        email: "feef",
-        isLoggedIn: true,
-    }
+import classes from "./Header.module.css";
 
 
-    const paragrapheStyle = {
-        backgroundColor : "purple",
+export default function Header() {
+  return (
+    <header className={classes.container}>
+      <h1 className={classes.titre}>Bienvenue</h1>
+      <p style={{
+        backgroundColor: "rgb(12, 12, 12)",
         fontSize: "1.2em",
-        color: userFromDB.isLoggedIn ? "green" : "red"
-    }
-
-    return (<header className={classes.container}>
-        <h1 className={classes.titre}>Bonjour</h1>
-        <p style={paragrapheStyle}>Bonjour tout le monde</p>
+        padding: "0.5em",
+      }} >
+        Lorem ipsum dolor sit, amet consectetur
+      </p>
     </header>
-    )
+  )
 }
